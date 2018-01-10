@@ -1,6 +1,12 @@
 # Connect4
 Connect4 console game in Java
 
+## Demo
+##### *a player wins*
+![image](https://raw.githubusercontent.com/zsq-cyber/Connect4/master/screenshots/connect4_demo.png)
+##### *draw*
+![image](https://raw.githubusercontent.com/zsq-cyber/Connect4/master/screenshots/connect4_draw_demo.png)
+
 ## How to run
 Download the jar
 ```
