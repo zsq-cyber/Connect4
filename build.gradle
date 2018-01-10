@@ -1,0 +1,40 @@
+apply plugin: 'idea'
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'application'
+
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+version = '1.0'
+group = 'com.shuqi'
+mainClassName = 'com.shuqi.connect4.Connect4'
+
+def versions = [
+    slf4j : '1.7.+',
+    logback: '1.0.10',
+]
+
+dependencies {
+
+    // Logging
+    compile group: 'org.slf4j', name: 'slf4j-api', version: versions.slf4j
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: versions.logback
+
+    // Testing
+    testCompile group: 'org.testng', name: 'testng', version: '6.+'
+}
+
+task sourceJar(type: Jar) {
+    from sourceSets.main.allSource
+    classifier = 'sources'
+}
+
+test {
+    useTestNG()
+}

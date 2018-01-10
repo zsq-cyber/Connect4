@@ -1,0 +1,17 @@
+<configuration>
+  <statusListener class="ch.qos.logback.core.status.NopStatusListener" />
+
+  <appender name="CONSOLE" class="ch.qos.logback.core.FileAppender">
+    <file>./logs/connect4.log</file>
+    <append>true</append>
+    <layout class="ch.qos.logback.classic.PatternLayout">
+      <Pattern>%d [%thread] %level %logger - %m%n</Pattern>
+    </layout>
+  </appender>
+
+  <logger name="com.shuqi.connect4.Connect4" level="INFO"/>
+
+  <root level="INFO">
+    <appender-ref ref="FILE" />
+  </root>
+</configuration>
